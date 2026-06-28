@@ -2,5 +2,17 @@
   "community": {
     "name": "Community Apps",
     "description": "Apps maintained by Michael"
+  },
+  "charts": {
+    "name": "Charts Apps",
+    "description": "Apps maintained by Michael"
+  },
+  "test": {
+    "name": "Test Apps",
+    "description": "Apps maintained by Michael"
+  },
+  "enterprise": {
+    "name": "Enterprise Apps",
+    "description": "Apps maintained by Michael"
   }
 }
