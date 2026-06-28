@@ -4,14 +4,17 @@ description: Tautulli is a python based web application for monitoring, analytic
 annotations:
   title: Tautulli
 type: application
-version: 1.2.10
+version: 1.2.11
 apiVersion: v2
-appVersion: 2.15.1
+appVersion: 2.17.2
 kubeVersion: '>=1.16.0-0'
 maintainers:
   - name: truenas
     url: https://www.truenas.com/
     email: dev@ixsystems.com
+  - name: Michael Dailous
+    url: https://github.com/mdailous/charts
+    email: github@dailous.net
 dependencies:
   - name: common
     repository: file://../../../common

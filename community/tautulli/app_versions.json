@@ -1,16 +1,16 @@
 {
-    "1.2.10": {
+    "1.2.11": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/tautulli/1.2.10",
+        "location": "/__w/charts/charts/community/tautulli/1.2.11",
         "last_update": "2025-03-06 08:26:26",
         "required_features": [
             "normalize/ixVolume",
             "normalize/acl"
         ],
-        "human_version": "2.15.1_1.2.10",
-        "version": "1.2.10",
+        "human_version": "2.17.2_1.2.11",
+        "version": "1.2.11",
         "chart_metadata": {
             "name": "tautulli",
             "description": "Tautulli is a python based web application for monitoring, analytics and notifications for Plex Media Server.",
@@ -18,15 +18,20 @@
                 "title": "Tautulli"
             },
             "type": "application",
-            "version": "1.2.10",
+            "version": "1.2.11",
             "apiVersion": "v2",
-            "appVersion": "2.15.1",
+            "appVersion": "2.17.2",
             "kubeVersion": ">=1.16.0-0",
             "maintainers": [
                 {
                     "name": "truenas",
                     "url": "https://www.truenas.com/",
                     "email": "dev@ixsystems.com"
+                },
+                {
+                    "name": "Michael Dailous",
+                    "url": "https://github.com/mdailous/charts",
+                    "email": "github@dailous.net"
                 }
             ],
             "dependencies": [
@@ -987,7 +992,7 @@
                                                 "max_length": 6,
                                                 "valid_chars": "^(0\\.[1-9]|[1-9][0-9]*)(\\.[0-9]|m?)$",
                                                 "valid_chars_error": "Valid CPU limit formats are</br>\n- Plain Integer - eg. 1</br>\n- Float - eg. 0.5</br>\n- Milicpu - eg. 500m\n",
-                                                "default": "4000m",
+                                                "default": "2000m",
                                                 "required": true
                                             }
                                         },
@@ -1000,7 +1005,42 @@
                                                 "max_length": 12,
                                                 "valid_chars": "^[1-9][0-9]*([EPTGMK]i?|e[0-9]+)?$",
                                                 "valid_chars_error": "Valid Memory limit formats are</br>\n- Suffixed with E/P/T/G/M/K - eg. 1G</br>\n- Suffixed with Ei/Pi/Ti/Gi/Mi/Ki - eg. 1Gi</br>\n- Plain Integer in bytes - eg. 1024</br>\n- Exponent - eg. 134e6\n",
-                                                "default": "8Gi",
+                                                "default": "2Gi",
+                                                "required": true
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "variable": "requests",
+                                "label": "Requests",
+                                "schema": {
+                                    "type": "dict",
+                                    "attrs": [
+                                        {
+                                            "variable": "cpu",
+                                            "label": "CPU",
+                                            "description": "Guaranteed CPU usage for Tautulli.",
+                                            "schema": {
+                                                "type": "string",
+                                                "max_length": 6,
+                                                "valid_chars": "^(0\\.[1-9]|[1-9][0-9]*)(\\.[0-9]|m?)$",
+                                                "valid_chars_error": "Valid CPU request formats are</br>\n- Plain Integer - eg. 1</br>\n- Float - eg. 0.5</br>\n- Milicpu - eg. 500m\n",
+                                                "default": "500m",
+                                                "required": true
+                                            }
+                                        },
+                                        {
+                                            "variable": "memory",
+                                            "label": "Memory",
+                                            "description": "Guaranteed Memory usage for Tautulli.",
+                                            "schema": {
+                                                "type": "string",
+                                                "max_length": 12,
+                                                "valid_chars": "^[1-9][0-9]*([EPTGMK]i?|e[0-9]+)?$",
+                                                "valid_chars_error": "Valid Memory request formats are</br>\n- Suffixed with E/P/T/G/M/K - eg. 1G</br>\n- Suffixed with Ei/Pi/Ti/Gi/Mi/Ki - eg. 1Gi</br>\n- Plain Integer in bytes - eg. 1024</br>\n- Exponent - eg. 134e6\n",
+                                                "default": "512Mi",
                                                 "required": true
                                             }
                                         }
