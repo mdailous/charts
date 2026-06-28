@@ -4125,9 +4125,9 @@
             "healthy_error": null,
             "home": "https://tautulli.com/",
             "location": "/__w/charts/charts/community/tautulli",
-            "latest_version": "1.2.10",
-            "latest_app_version": "2.15.1",
-            "latest_human_version": "2.15.1_1.2.10",
+            "latest_version": "1.2.11",
+            "latest_app_version": "2.17.2",
+            "latest_human_version": "2.17.2_1.2.11",
             "last_update": "2025-03-06 08:26:26",
             "name": "tautulli",
             "recommended": false,
@@ -4137,6 +4137,11 @@
                     "name": "truenas",
                     "url": "https://www.truenas.com/",
                     "email": "dev@ixsystems.com"
+                },
+                {
+                    "name": "Michael Dailous",
+                    "url": "https://github.com/mdailous/charts",
+                    "email": "github@dailous.net"
                 }
             ],
             "tags": [
